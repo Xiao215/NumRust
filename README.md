@@ -22,7 +22,18 @@ Feel free to join and contribute for fun :)
 
 # Installation
 
-### 1. Install maturin (Build and publish crates with pyo3, rust-cpython, cffi and uniffi bindings as well as rust binaries as python packages.) This will help us convert rust code to python package.
+### 1. Virtual environment.
+
+If you don't have virtualenv, download here: [(mac)](https://formulae.brew.sh/formula/virtualenv)
+
+```
+virtualenv venv
+source venv/bin/activate
+```
+
+### 2. Install maturin
+
+(Build and publish crates with pyo3, rust-cpython, cffi and uniffi bindings as well as rust binaries as python packages.) This will help us convert rust code to python package.
 
 ```
 pip3 install maturin
@@ -31,7 +42,7 @@ maturin build --release
 pip3 install target/wheels/[whatever your wheels name, copy it over].whl
 ```
 
-### 2. Now you can test your package in `test.py`
+### 3. Now you can test your package in `test.py`
 
 ```
 python3 test.py
