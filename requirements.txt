@@ -1,0 +1,4 @@
+autopep8==2.0.2
+maturin==0.14.15
+numrust @ file:///Users/xiao215/UofT/NumRust/numrust/target/wheels/numrust-0.1.0-cp311-cp311-macosx_11_0_arm64.whl
+pycodestyle==2.10.0
