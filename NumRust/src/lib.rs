@@ -26,7 +26,26 @@ fn primecounter(range_from: u64, range_til: u64) -> (u32, u32) {
 
 /// Put the function in a Python module
 #[pymodule]
-fn my_rust_module(_py: Python, m: &PyModule) -> PyResult<()> {
+fn numrust(_py: Python, m: &PyModule) -> PyResult<()> {
     m.add_function(wrap_pyfunction!(primecounter, m)?)?;
     Ok(())
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    // #[test]
+    // fn simple_test_false() {
+    //     assert_eq!(is_prime(0), false);
+    //     assert_eq!(is_prime(1), false);
+    //     assert_eq!(is_prime(12), false)
+    // }
+
+    // #[test]
+    // fn simple_test_true() {
+    //     assert_eq!(is_prime(2), true);
+    //     assert_eq!(is_prime(3), true);
+    //     assert_eq!(is_prime(41), true)
+    // }
 }

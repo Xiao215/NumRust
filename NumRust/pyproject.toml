@@ -3,7 +3,7 @@ requires = ["maturin>=0.14,<0.15"]
 build-backend = "maturin"
 
 [project]
-name = "NumRust"
+name = "numrust"
 requires-python = ">=3.7"
 classifiers = [
     "Programming Language :: Rust",
@@ -13,4 +13,5 @@ classifiers = [
 
 
 [tool.maturin]
+python-source = "python"
 features = ["pyo3/extension-module"]
