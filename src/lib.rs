@@ -1,5 +1,8 @@
 use pyo3::prelude::*;
 
+mod tensor;
+use tensor::Tensor;
+
 #[pyfunction]
 fn primecounter(range_from: u64, range_til: u64) -> (u32, u32) {
     /* Returns the number of found prime numbers between [range_from] and [range_til] """ */
@@ -28,6 +31,7 @@ fn primecounter(range_from: u64, range_til: u64) -> (u32, u32) {
 #[pymodule]
 fn numrust(_py: Python, m: &PyModule) -> PyResult<()> {
     m.add_function(wrap_pyfunction!(primecounter, m)?)?;
+    m.add_class::<Tensor>()?;
     Ok(())
 }
 
