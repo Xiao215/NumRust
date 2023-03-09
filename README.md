@@ -7,17 +7,19 @@ Feel free to join and contribute for fun :)
 
 ```
 .
-├── numrust
-│   ├── Cargo.lock
-│   ├── Cargo.toml
-│   ├── pyproject.toml
-│   ├── python
-│   │   └── numrust
-│   │       └── __init__.py
-│   ├── src
-│   │   └── lib.rs (where your actual code goes)
-│   └── test.py (this just test our stuff)
-└── requirements.txt
+├── Cargo.lock
+├── Cargo.toml
+├── README.md
+├── pyproject.toml
+├── python
+│   └── numrust
+│       └── __init__.py
+├── requirements.txt
+├── src
+│   ├── lib.rs
+│   └── tensor.rs
+├── test.py
+└── update_numrust.sh
 ```
 
 # Installation
@@ -37,9 +39,7 @@ source venv/bin/activate
 
 ```
 pip3 install maturin
-cd numrust
-maturin build --release
-pip3 install target/wheels/[whatever your wheels name, copy it over].whl
+./update_numrust.sh
 ```
 
 ### 3. Now you can test your package in `test.py`
